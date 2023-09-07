@@ -1,0 +1,71 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{tabu}
+\usepackage[inkscapeformat=png]{svg}
+\usepackage[polish]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+\addbibresource{bibliography.bib}
+\pagestyle{fancy}
+\graphicspath{ {images/} }
+\linespread{1.5}
+\title{Title goes here}
+\author{Name&Surname}
+\date{Day Month Year}
+
+\renewcommand*\contentsname{Spis treści}
+\renewcommand{\listfigurename}{Spis rysunków}
+\renewcommand{\listtablename}{Spis tabel}
+\renewcommand{\chaptername}{Rozdział}
+
+
+\begin{document}
+  \input{components/titlepage}
+  \tableofcontents
+
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
+
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
+  \chapter{Wstęp}
+  \input{chapters/wstep}
+
+  \chapter{Wymagania aplikacji}
+  \input{chapters/wymagania}
+
+  \chapter{Analiza}
+  \input{chapters/analiza}
+
+  \chapter{Projekt interfejsu graficznego}
+  \input{chapters/projekt_interfejsu_graficznego}
+
+  \chapter{Technologia}
+  \input{chapters/technologia}
+
+  \chapter{Model danych}
+  \input{chapters/model_danych}
+
+  \chapter{Testowanie}
+  \input{chapters/testowanie}
+
+  \chapter{Bezpieczeństwo i archiwizacja}
+  \input{chapters/bezpieczenstwo}
+
+  \chapter{Zakończenie}
+  \input{chapters/zakonczenie}
+  
+  \printbibliography[heading=bibintoc, title={ Bibliografia}]
+\end{document}
