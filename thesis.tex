@@ -8,7 +8,6 @@
 \usepackage{tabu}
 \usepackage[inkscapeformat=png]{svg}
 \usepackage[polish]{babel}
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
@@ -30,42 +29,42 @@
 
 
 \begin{document}
-  \input{components/titlepage}
-  \tableofcontents
+\input{components/titlepage}
+\tableofcontents
 
-  \cleardoublepage
-  \addcontentsline{toc}{chapter}{\listtablename}
-  \listoftables
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
-  \cleardoublepage
-  \addcontentsline{toc}{chapter}{\listfigurename}
-  \listoffigures
-  \chapter{Wstęp}
-  \input{chapters/wstep}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+\chapter{Wprowadzenie}
+\input{chapters/wprowadzenie}
 
-  \chapter{Wymagania aplikacji}
-  \input{chapters/wymagania}
+\chapter{Wymagania aplikacji}
+\input{chapters/wymagania}
 
-  \chapter{Analiza}
-  \input{chapters/analiza}
+\chapter{Analiza i badania rynku}
+\input{chapters/analiza}
 
-  \chapter{Projekt interfejsu graficznego}
-  \input{chapters/projekt_interfejsu_graficznego}
+\chapter{Projekt interfejsu graficznego}
+\input{chapters/projekt_interfejsu_graficznego}
 
-  \chapter{Technologia}
-  \input{chapters/technologia}
+\chapter{Technologia}
+\input{chapters/technologia}
 
-  \chapter{Model danych}
-  \input{chapters/model_danych}
+\chapter{Model danych}
+\input{chapters/model_danych}
 
-  \chapter{Testowanie}
-  \input{chapters/testowanie}
+\chapter{Testowanie}
+\input{chapters/testowanie}
 
-  \chapter{Bezpieczeństwo i archiwizacja}
-  \input{chapters/bezpieczenstwo}
+\chapter{Bezpieczeństwo i archiwizacja}
+\input{chapters/bezpieczenstwo}
 
-  \chapter{Zakończenie}
-  \input{chapters/zakonczenie}
-  
-  \printbibliography[heading=bibintoc, title={ Bibliografia}]
+\chapter{Zakończenie}
+\input{chapters/zakonczenie}
+
+\printbibliography[heading=bibintoc, title={ Bibliografia}]
 \end{document}
