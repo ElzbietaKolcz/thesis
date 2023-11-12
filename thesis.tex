@@ -25,22 +25,21 @@
 \renewcommand*\contentsname{Spis treści}
 \renewcommand{\listfigurename}{Spis rysunków}
 \renewcommand{\listtablename}{Spis tabel}
-\renewcommand{\chaptername}{Rozdział}
-
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
 
 \begin{document}
 \input{components/titlepage}
 \tableofcontents
 
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\listtablename}
-\listoftables
-
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+
 \chapter{Wprowadzenie}
 \input{chapters/wprowadzenie}
+
+\chapter{Analiza i badania rynku}
+\input{chapters/analiza}
 
 \chapter{Technologia}
 \input{chapters/technologia}
@@ -48,12 +47,8 @@
 \chapter{Wymagania aplikacji}
 \input{chapters/wymagania}
 
-\chapter{Analiza i badania rynku}
-\input{chapters/analiza}
-
 \chapter{Projekt interfejsu graficznego}
 \input{chapters/projekt_interfejsu_graficznego}
-
 
 \chapter{Model danych}
 \input{chapters/model_danych}
@@ -67,5 +62,5 @@
 \chapter{Zakończenie}
 \input{chapters/zakonczenie}
 
-\printbibliography[heading=bibintoc, title={ Bibliografia}]
+\printbibliography[heading=bibintoc, title={Bibliografia}]
 \end{document}
