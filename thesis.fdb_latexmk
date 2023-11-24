@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1700779812 "thesis.bcf" "thesis.bbl" "thesis" 1700779840 0
-  "./bibliography.bib" 1699803891 1807 7f7b15bebfbd5046b8c7630300c18876 ""
-  "thesis.bcf" 1700779840 108170 77628cdf805c7fc211936577e1690568 "pdflatex"
+["biber thesis"] 1700862052 "thesis.bcf" "thesis.bbl" "thesis" 1700862060 0
+  "./bibliography.bib" 1700862018 3539 73156da64cb7b3c5c25dcb6a27d2d14e ""
+  "thesis.bcf" 1700862059 108914 3bae1e008f883e455bab47979c13021c "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1700779838 "c:/Users/ek/Desktop/repos/latex-thesis-template/thesis.tex" "thesis.pdf" "thesis" 1700779840 0
+["pdflatex"] 1700862058 "c:/Users/ek/Desktop/repos/latex-thesis-template/thesis.tex" "thesis.pdf" "thesis" 1700862060 0
   "C:/Users/ek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694105702 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ek/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1694105730 31952 22c0b1c612adb8524c7cb54dde7a1b85 ""
   "C:/Users/ek/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1695233762 49100 8f405fa6253a68010118a155d5f877fa ""
@@ -137,7 +137,7 @@
   "chapters/bezpieczenstwo.tex" 1695236943 299 7b3a969726f3b5bcbaa38fc7a7d06b0b ""
   "chapters/model_danych.tex" 1695236683 87 f3c192decea7e85f3652b293e1f1cd1a ""
   "chapters/projekt_interfejsu_graficznego.tex" 1694081770 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/technologia.tex" 1700779615 3674 a2d462c0310bb94359ad7a67fc24bd3a ""
+  "chapters/technologia.tex" 1700862048 6582 6a155ce073cde75a6aa7a12f9c064ae8 ""
   "chapters/testowanie.tex" 1695236796 118 a0617ea0ab9be7fea7bc95c4727e6db9 ""
   "chapters/wprowadzenie.tex" 1700600516 2044 e3f9d4baadf59523be4793bfed21a0cf ""
   "chapters/wymagania.tex" 1700602504 2625 51a610f664e1542c11f22c37a0b5814b ""
@@ -147,12 +147,12 @@
   "images/analiza/feelingMySkin.jpg" 1700771202 241598 6ae6088e86a8b72ebe0347bae4372b78 ""
   "images/analiza/googleCalendar.jpg" 1700771231 126440 3d87a20b54468285f440fb8ed44fe691 ""
   "images/analiza/protonCalendar.jpg" 1700771282 167587 d8db6121c615d36eaaccc1ab3dcb5eed ""
-  "thesis.aux" 1700779840 4873 4793aaf3c33575afd7fc8b2c0ad43e1a "pdflatex"
-  "thesis.bbl" 1700779838 3951 643c242aea7f83b0a73ffe581b62ac54 "biber thesis"
-  "thesis.lof" 1700779840 641 90a1979b507d91e6674c3743c2907c85 "pdflatex"
-  "thesis.run.xml" 1700779840 2320 cab6a36c5e971a93160b7bea85e3419d "pdflatex"
+  "thesis.aux" 1700862059 6205 45f76360f0063248a1c2ea5d99b2882b "pdflatex"
+  "thesis.bbl" 1700862056 15196 eebdfcc7dca406911cc63415ddfdacad "biber thesis"
+  "thesis.lof" 1700862059 641 90a1979b507d91e6674c3743c2907c85 "pdflatex"
+  "thesis.run.xml" 1700862059 2320 cab6a36c5e971a93160b7bea85e3419d "pdflatex"
   "thesis.tex" 1700774585 1555 b5f559f63ba6b965c35de554b0ddc778 ""
-  "thesis.toc" 1700779840 1292 fe7491960bdb79b9a536c3c77cd815bf "pdflatex"
+  "thesis.toc" 1700862059 1292 13552ce2a1ec01cf02a9d2ddc494c7ec "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"

@@ -1,36 +1,32 @@
-\phantom{th} Obecnie na rynku aplikacje mobilne mogą być rozwijane przy użyciu różnych technologii, takich jak Kotlin dla platformy Android, Swift dla iOS, czy też React Native, który obsługuje obie te platformy. Wybór właściwej technologii, narzędzi i bibliotek może znacznie ułatwić proces tworzenia aplikacji, dlatego warto poświęcić dodatkowy czas na zastanowienie się, które rozwiązania najlepiej sprawdzą się w kontekście konkretnego projektu.
+\phantom{th}
+Obecnie aplikacje mobilne mogą być tworzone przy użyciu różnych technologii, na przykład takich jak Kotlin dla platformy Android, Swift dla iOS, czy też React Native, który obsługuje obie te platformy. Wybór właściwej technologii, narzędzi i bibliotek może znacznie ułatwić proces tworzenia aplikacji, dlatego warto poświęcić dodatkowy czas na zastanowienie się, które rozwiązania najlepiej sprawdzą się w kontekście konkretnego projektu.
 
 \section{Technologie}
-Napisać czym są języki programowania, frameworki, platformy chmurowe, API\\
-
 \phantom{Th}
-Technologie stanowi szereg elementów, począwszy od języków programowania, przez frameworki ułatwiające strukturyzację projektów, po platformy umożliwiające dostęp do chmurowych usług.
+Technologia stanowi szereg elementów, począwszy od języków programowania, przez frameworki ułatwiające strukturyzację pracy, po platformy umożliwiające dostęp do chmurowych usług. To wszechstronne podejście umożliwia efektywną budowę, utrzymanie i rozwijanie projektu.
 
 \subsubsection*{\textbf{React Native}}
 \phantom{th}
-Ze względu na swoją kompleksowość oraz szybkość odświeżania praca została wykonana z wykorzystaniem React Native.
-React Native to technologia oparta na bibliotece React,
-która jest używana do tworzenia interfejsów za pomocą języka JavaScript. Biblioteka ta jest typu open source, co oznacza, że jej kod źródłowy jest udostępniony do użytku publicznego i każdy ma prawo go modyfikować według własnych potrzeb.
+Ze względu na swoją kompleksowość oraz szybkość odświeżania praca została wykonana z wykorzystaniem React Native. Jest to framework, czyli szkielet oprogramowania \cite{framework} opartego na React, który można rozbudować o dodatkowe funkcje. React jest biblioteką typu open source \cite{opensource}, co oznacza, że jej kod źródłowy jest udostępniony do użytku publicznego i każdy ma prawo go modyfikować według własnych potrzeb. Tę bibliotekę wykorzystuje się głównie do tworzenia interfejsów za pomocą języka programowania JavaScript, ze względu na możliwość zarządzania stanem z poziomu komponentu, co pozwala na dynamiczną aktualizację interfejsu \cite{javascripteverywhere}.
 
-React Native służy do tworzenia wieloplatformowych aplikacji, znanych również jako aplikacje cross-platform,
-czyli aplikacji zaprojektowanych i napisanych w taki sposób, aby działały na wielu różnych platformach i systemach operacyjnych.
-Dodatkowo wykorzystuje programowanie natywne zapewniając w ten sposób zestaw komponentów niezależnych od systemu operacyjnego,
-który następnie jest dynamicznie przekształcany na natywne elementy interfejsu danego systemu. Dzięki temu aplikacja jest w stanie
-zachować spójność i dostosować się do  konkretnej specyfiki.
+Język programowania to zbiór poleceń, jakie maszyna powinna podjąć w celu wykonania określonych czynności. Jest to narzędzie, które tłumaczy zrozumiałe dla człowieka instrukcje na formę zrozumiałą dla komputera. Składa się on z trzech głównych elementów: składni, określającej reguły tworzenia wyrażeń; semantyki, wyjaśniającej znaczenie poszczególnych symboli w kontekście programu komputerowego; oraz paradygmatów, które kształtują ogólne podejście do projektowania i strukturyzacji kodu w celu efektywnego rozwiązywania konkretnych problemów \cite{jezykprog}. JavaScript to lekki, interpretowany lub kompilowany na bieżąco skryptowy oraz wieloparadygmatowy język programowania.
 
-Wielką zaletą React Native jest jego szybkie odświeżanie, co przyczynia się do oszczędności czasu podczas pisania kodu.
-Jest to możliwe dzięki wykorzystaniu JavaScript przez React Native \cite{reactnative}.
+React Native służy do tworzenia wieloplatformowych aplikacji, znanych również jako cross-platform mobile applications, czyli aplikacji zaprojektowanych w taki sposób, aby działały na wielu różnych systemach operacyjnych. Dodatkowo wykorzystuje programowanie natywne zapewniając w ten sposób zestaw komponentów niezależnych od systemu operacyjnego, który następnie jest dynamicznie przekształcany na natywne elementy interfejsu danego systemu. Dzięki temu aplikacja jest w stanie zachować spójność i dostosować się do konkretnej specyfiki \cite{reactnative}. Aplikacje napisane w React Native to na przykład Facebook, Instagram, Skype, czy chociażby Pinterest \cite{javascripteverywhere}.
 
 \subsubsection*{\textbf{Expo / Expo Go}}
 \phantom{Th}
-Expo to platforma typu open source dla aplikacji działających natywnie na różnych systemach operacyjnych.
-Expo umożliwia testowania aplikacji na różnych urządzeniach mobilnych. Aby korzystać z Expo wymagane jest programowanie w JavaScript/TypeScript
-oraz posiadanie aplikacji na urządzeniu mobilnym, które można pobrać z Sklepu Play w przypadku Androida lub z App Store w przypadku iOS
-\cite{expogo}.
+Expo to kompleksowa platforma typu open source, zaprojektowana do tworzenia aplikacji mobilnych, które działają natywnie na różnych systemach operacyjnych. Oferuje narzędzia i usługi, które ułatwiają uruchamianie i rozwijanie projektów iOS oraz Android z użyciem React Native \cite{javascripteverywhere}. Platforma ta ułatwia procesy uruchamiania i rozwijania projektów poprzez dostarczenie narzędzi w postaci Expo CLI (Command-Line Interface) oraz platformy internetowej Expo Go, na której można podglądać efekty prac na bieżąco na urządzeniu mobilnym. Aby korzystać z Expo Go wymagane jest pisanie kodu w JavaScript/TypeScript, posiadanie aplikacji na urządzeniu mobilnym, które można pobrać z Sklepu Play w przypadku Androida lub z App Store w przypadku iOS oraz połączenie komputera, jak i telefonu w tej samej sieci \cite{expogo}.
 
 \subsubsection*{\textbf{Google Firebase}}
 \phantom{th}
-Napisać o  Cloud Firestore,  Authentication, Storage.
+Usługi chmurowe to nowoczesne rozwiązanie oferujące dostęp do zasobów obliczeniowych, przestrzeni dyskowej lub środowisk programistycznych. Jest pewnego rodzaju magazynem cyfrowym umożliwiającym dostęp do plików z dowolnego urządzenia, pod warunkiem, że jest ono połączone z internetem \cite{cloud}. Takim rozwiązaniem jest Google Firebase, które oferuje ogromne możliwości, między innymi tworzenie warstwy serwerowej, bez konieczności zarządzania serwerem, bezproblemowe skalowanie, narzędzia obsługujące uwierzytelniania użytkowników, a także pracę z uczeniem maszynowym \cite{firebase}.
+
+Firebase jest nierelacyjną bazą danych w modelu dokumentowym. Bazy NoSQL powstały w odpowiedzi na problemy jakie generowały relacyjne bazy danych. Główną ich wadą jest utrudniona obsługa danych w czasie rzeczywistym. Oprócz tego występuje problem współbieżności, gdy wielu użytkowniku pracuje na tych samych danych; integracji, czyli zależność struktur dla każdej z aplikacji; impedancji polegający na niezgodności modelu danych w bazie z modelem danych w aplikacji oraz skalowania, które odbywa się tylko „górę”. Bazy nierelacyjne są remedium na tego typu problemy. Jednym z typów baz NoSQL jest model dokumentowy, w którym dokumenty są samoopisującymi hierarchicznymi strukturami drzewiastymi, które mogą się składać z wartości złożonych lub wartości skalarnych. W takim modelu kluczem może być dowolny ciąg znaków, a wartością jest dokumentem w formacie XML lub JSON \cite{nosql}.
+
+Jako bazę danych projektu wykorzystano usługę Cloud Firestore, która pozwala na aktualizacje w czasie rzeczywistym. Model danych tego rozwiązania pozwala obsługiwać elastyczne, hierarchiczne struktury danych. Organizacja wpisów polega na tworzeniu dokumentów, a w nich kolekcji tworząc tym samym skalowanie w „bok”. Dodatkowo umożliwia wysyłanie zapytań do pobrania pojedynczych dokumentów lub do wszystkich dokumentów w kolekcji, tworzenie wielu filtrów oraz sortowanie rekordów \cite{storage}. W celu efektywnego zarządzania zasobami multimedialnymi w projekcie, skorzystano z usługi Cloud Storage do przechowywania ilustracji.
+
+Aby zabezpieczyć proces uwierzytelniania użytkownika, zdecydowano się skorzystać z Firebase Authentication, które nie tylko oferuje szeroki zakres metod uwierzytelniania, ale także wykorzystuje kompleksowy zestaw narzędzi SDK(Software Development Kit) i gotowych bibliotek interfejsu użytkownika. Dzięki temu narzędziu możliwe jest uwierzytelnianie za pomocą haseł, numerów telefonów, mediów społecznościowych, a także uwierzytelnianie wieloskładnikowe, co zapewnia elastyczność i bezpieczeństwo procesu logowania. Dodatkowo, Firebase Authentication obsługuje funkcję odzyskiwania konta, co stanowi istotny element kompleksowej strategii zarządzania dostępem użytkowników \cite{authenticationase}.
+
 
 \subsubsection*{\textbf{Redux/Redux-Toolkit}}
 \phantom{th}
