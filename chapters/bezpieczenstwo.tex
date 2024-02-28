@@ -1,3 +1,16 @@
 Napisać coś o wielkiej konieczności zawarcia fundamentalnego zagadnienia jakim jest kopia zapasowaaaaa
-Napisać coś o rodzajach ataków i środkach ostrożności które zostały zaimplementowane w ZodiaCal - tylko pisać o tym na co masz wpływ! nie że wyciek danych tylko kilkasz guziczek 
- 
+Napisać coś o rodzajach ataków i środkach ostrożności które zostały zaimplementowane w ZodiaCal - tylko pisać o tym na co masz wpływ! nie że wyciek danych tylko kilkasz guziczek
+
+Zapewnienie bezpieczeństwa aplikacji jest kluczowym elementem procesu tworzenia oprogramowania.
+
+\section{Szyfrowania Kluczy}
+W celu zabezpieczenia poufnych informacji, takich jak klucze API czy hasła, warto przechowywać je w pliku konfiguracyjnym .env. Ten plik powinien być odpowiednio zabezpieczony i nigdy nie powinien być umieszczany w repozytorium kodu źródłowego. Klucze w pliku .env powinny być szyfrowane, aby minimalizować ryzyko nieautoryzowanego dostępu.
+
+\section{Walidacja Formularzy}
+Aby uniknąć problemów związanych z wprowadzaniem błędnych danych, istotne jest przeprowadzanie walidacji formularzy po stronie klienta i serwera. Poprawna walidacja formularzy pomaga w zapobieganiu atakom typu SQL Injection oraz Cross-Site Scripting (XSS). Do realizacji tego zadania skorzystano z biblioteki formik i yarn. Aby w aplikacji sprawnie przeprowadzić walidację formularzy, wykorzystano bibliotekę Formik dostarczającą gotowe rozwiązania.
+
+\section{Kontrola dostępu pomiędzy ekranem logowania a stroną główną}
+Bezpieczeństwo aplikacji można poprawić poprzez skonfigurowanie dostępu do ekranów logowania, a strony głównej w oparciu o stan użytkownika. Tylko uprawnieni użytkownicy powinni mieć dostęp do tych funkcji, co może pomóc w zminimalizowaniu ryzyka ataków.
+
+\section{Archiwizacja}
+Regularne tworzenie kopii zapasowych bazy danych jest niezbędne w przypadku awarii systemu lub utraty danych. W aplikacji wdrożono cykliczne kopie zapasowe bazy danych za pomocą Automated Backups w technologii Google Firebase.
