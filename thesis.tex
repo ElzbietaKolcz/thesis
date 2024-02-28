@@ -1,18 +1,21 @@
 \documentclass[12pt]{report}
 \usepackage{graphicx}
-\usepackage{blindtext}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{titlesec}
-\usepackage{lipsum}
-\usepackage{tabu}
 \usepackage[inkscapeformat=png]{svg}
+% \usepackage{blindtext}
+% \usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{titlesec}
+% \usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{indentfirst}
+% \usepackage[table,xcdraw]{xcolor}
+% \usepackage{tabu}
 \usepackage[polish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage[backend=biber]{biblatex}
-\usepackage[a4paper,width=150mm,top=10mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[a4paper,width=150mm,top=10mm,bottom=25mm, left=3.5cm, right=1.5cm, bindingoffset=6mm]{geometry}
 
 \addbibresource{bibliography.bib}
 \graphicspath{ {images/} }
@@ -29,8 +32,6 @@
 \begin{document}
 \input{components/titlepage}
 \tableofcontents
-
-\listoffigures
 
 \chapter{Wprowadzenie}
 \input{chapters/wprowadzenie}
@@ -58,6 +59,9 @@
 
 \chapter{Zakończenie}
 \input{chapters/zakonczenie}
+
+\listoffigures
+\listoftables
 
 \printbibliography[heading=bibintoc, title={Bibliografia}]
 \end{document}
