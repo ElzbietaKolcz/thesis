@@ -22,12 +22,26 @@ Diagram kolekcji user (Tab. \ref{fig:user}) zawiera informację o zalogowanym u�
 
 Kolekcja birthday (Tab. \ref{fig:birthday}) przedstawia listę dat urodzin różnych osób. Posiada dwa pola typu int tzn. day oraz month i jedno pole typu string name, które wskazuje na imię jubilata.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{images/model_danych/skinCare}
-	\caption{Diagram kolekcji skinCare}
-	\label{fig:skinCare}
-\end{figure}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=1\linewidth]{images/model_danych/skinCare}
+% 	\caption{Diagram kolekcji skinCare}
+% 	\label{fig:skinCare}
+% \end{figure}
+% \begin{table}[]
+% \centering
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|l|l|l|}
+% \hline
+% \rowcolor[HTML]{FF8FE0} 
+% xyz & birthday              & xyz                   \\ \hline
+% xyz &                       &                       \\ \cline{1-1}
+% xyz & \multirow{-2}{*}{xyz} & \multirow{-2}{*}{xyz} \\ \hline
+% \end{tabular}%
+% }
+% \caption{examoke zyx}
+% \label{tab:my-table}
+% \end{table}
 
 W tabeli o nazwie "skinCare" (Tab. \ref{fig:skinCare}), znajduje się zbiór informacji dotyczących pielęgnacji cery. W ZodiaCal zostały wyróżnione 4 rodzaje pielęgnacji: złuszczanie, odbudowa, nawilżanie oraz przerwa. Każda kolekcja danego typu pielęgnacji posiada swoje własne produkty. Produkty natomiast zawierają informację o nazwie produktu, nazwie marki oraz terminie ważności kosmetyku. Użytkownik wybiera produkty do pielęgnacji z zewnętrznego API, a następnie są one przekazywane do Firebase.
 
