@@ -1,6 +1,8 @@
+\addcontentsline{toc}{chapter}{Model danych}
 Diagramy UML zwane również Unified Modeling Language umożliwiają graficzne przedstawienie logiki relacji, czy procesu \cite{diagram}. Są to standardy graficzne używane w inżynierii oprogramowania do modelowania struktury i zachowania systemów informatycznych. Umożliwiają one lepsze zrozumienie architektury systemu oraz pomagają w procesie projektowania i dokumentowania. Poniżej zostały przedstawione diagramy kolekcji występujących w bazie danych Firebase wykorzystywanych w aplikacji ZodiaCal.
 
-\section{Diagram bazy danych}
+\section*{Diagram bazy danych}
+\addcontentsline{toc}{section}{Diagram bazy danych}
 
 \begin{figure}[h]
 	\centering
@@ -22,26 +24,12 @@ Diagram kolekcji user (Tab. \ref{fig:user}) zawiera informację o zalogowanym u�
 
 Kolekcja birthday (Tab. \ref{fig:birthday}) przedstawia listę dat urodzin różnych osób. Posiada dwa pola typu int tzn. day oraz month i jedno pole typu string name, które wskazuje na imię jubilata.
 
-% \begin{figure}[h]
-% 	\centering
-% 	\includegraphics[width=1\linewidth]{images/model_danych/skinCare}
-% 	\caption{Diagram kolekcji skinCare}
-% 	\label{fig:skinCare}
-% \end{figure}
-% \begin{table}[]
-% \centering
-% \resizebox{\textwidth}{!}{%
-% \begin{tabular}{|l|l|l|}
-% \hline
-% \rowcolor[HTML]{FF8FE0} 
-% xyz & birthday              & xyz                   \\ \hline
-% xyz &                       &                       \\ \cline{1-1}
-% xyz & \multirow{-2}{*}{xyz} & \multirow{-2}{*}{xyz} \\ \hline
-% \end{tabular}%
-% }
-% \caption{examoke zyx}
-% \label{tab:my-table}
-% \end{table}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{images/model_danych/skinCare}
+	\caption{Diagram kolekcji skinCare}
+	\label{fig:skinCare}
+\end{figure}
 
 W tabeli o nazwie "skinCare" (Tab. \ref{fig:skinCare}), znajduje się zbiór informacji dotyczących pielęgnacji cery. W ZodiaCal zostały wyróżnione 4 rodzaje pielęgnacji: złuszczanie, odbudowa, nawilżanie oraz przerwa. Każda kolekcja danego typu pielęgnacji posiada swoje własne produkty. Produkty natomiast zawierają informację o nazwie produktu, nazwie marki oraz terminie ważności kosmetyku. Użytkownik wybiera produkty do pielęgnacji z zewnętrznego API, a następnie są one przekazywane do Firebase.
 
@@ -63,7 +51,8 @@ Kolekcja goals (Tab. \ref{fig:goals}) jest zagnieżdżona kolejno w kolekcji rep
 
 Podobnie jak w przypadku kolekcji goals, tabela zatytułowana tasks (Tab. \ref{fig:tasks}) również jest zagnieżdżona w bieżącym roku oraz miesiącu. W tej kolekcji są tworzone kolejne kolekcje ilustrujące dni w danym miesiącu. Wszystkie zadania są przypisane do swoich unikalnych identyfikatorów, posiadają pola typu int, w których przechowywane są numery indeksów, pola typu string oznaczone jako "name" zawierające opis zadania, a także pola typu bool oznaczone jako "state", wskazujące na stan zadania.
 
-\section{Diagram UML komponentów}
+\section*{Diagram UML komponentów}
+\addcontentsline{toc}{section}{Diagram UML komponentów}
 
 \begin{figure}[h]
 	\centering
@@ -74,7 +63,8 @@ Podobnie jak w przypadku kolekcji goals, tabela zatytułowana tasks (Tab. \ref{f
 
 NAPISAĆ CZYM SĄ KOMPONENTY!
 
-\section{Diagram przypadków użycia}
+\section*{Diagram przypadków użycia}
+\addcontentsline{toc}{section}{Diagram przypadków użycia}
 
 SKOMPRESOWAĆ ODSTĘPY + NUMERKI ZAMIAST LITER W PODLIŚCIE! + WCIĘCIE PRZYPADEK UŻYCIA
 

@@ -14,6 +14,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
+\usepackage{pgfplots}
 \usepackage[backend=biber]{biblatex}
 \usepackage[a4paper,width=150mm,top=10mm,bottom=25mm, left=3.5cm, right=1.5cm, bindingoffset=6mm]{geometry}
 
@@ -32,34 +33,38 @@
 
 \begin{document}
 \input{components/titlepage}
-\tableofcontents
 
-\chapter{Wprowadzenie}
+\chapter*{Wprowadzenie}
 \input{chapters/wprowadzenie}
 
-\chapter{Analiza i badania rynku}
+\chapter*{Analiza i badania rynku}
 \input{chapters/analiza}
 
-\chapter{Przegląd technologiczny}
+\chapter*{Przegląd technologiczny}
 \input{chapters/technologia}
 
-\chapter{Wymagania aplikacji}
+\chapter*{Wymagania aplikacji}
 \input{chapters/wymagania}
 
-\chapter{Projekt interfejsu graficznego}
+\chapter*{Projekt interfejsu graficznego}
 \input{chapters/projekt_interfejsu_graficznego}
 
-\chapter{Model danych}
+\chapter*{Model danych}
 \input{chapters/model_danych}
 
-\chapter{Testowanie}
+\chapter*{Implementacja}
+\input{chapters/implementacja}
+
+\chapter*{Testowanie}
 \input{chapters/testowanie}
 
-\chapter{Bezpieczeństwo i archiwizacja}
+\chapter*{Bezpieczeństwo i archiwizacja}
 \input{chapters/bezpieczenstwo}
 
-\chapter{Zakończenie}
+\chapter*{Zakończenie}
 \input{chapters/zakonczenie}
+
+\tableofcontents
 
 \listoffigures
 \listoftables

@@ -1,0 +1,4 @@
+Polecenia:
+
+biber thesis
+pdflatex --no-shell-escape  thesis.tex
