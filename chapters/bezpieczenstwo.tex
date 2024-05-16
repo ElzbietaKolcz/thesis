@@ -1,5 +1,5 @@
 \addcontentsline{toc}{chapter}{Bezpieczeństwo i archiwizacja}
-W czasach nieustannych wycieków danych i wciąż rosnącego cyberprzestępstwa istotnym elementem jest zapewnienie odpowiedniego poziomu bezpieczeństwa aplikacji. Według analizy przeprowadzonej przez "Rzeczpospolitą", która przedstawiono na rysunku 1 na podstawie informacji policji dotyczących incydentów związanych z oszustwami internetowymi oraz phisingiem, Czyli atakami polegającym na wyłudzaniu danych, \cite{phishing}  można stwierdzić, że w ciągu ostatnich pięciu lat liczba wykrytych w Polsce przestępstw cybernetycznych wzrosła o 72\% \cite{wykresbezpieczenstwo} [\ref{fig:Wykres}].
+W czasach nieustannych wycieków danych i wciąż rosnącej cyberprzestępczości istotnym elementem jest zapewnienie odpowiedniego poziomu bezpieczeństwa aplikacji. Według analizy przeprowadzonej przez "Rzeczpospolitą" na podstawie informacji policji dotyczących incydentów związanych z oszustwami internetowymi oraz phishingiem, czyli atakami polegającym na wyłudzaniu danych \cite{phishing} można stwierdzić, że w ciągu ostatnich pięciu lat liczba wykrytych w Polsce przestępstw cybernetycznych wzrosła o 72\% \cite{wykresbezpieczenstwo}. Wyniki analizy zostały przedstawione na wykresie \ref{fig:Wykres}. \\
 
 % poprawic wykres i to jak wyglada
 \begin{figure}[h]
@@ -13,7 +13,7 @@ W czasach nieustannych wycieków danych i wciąż rosnącego cyberprzestępstwa 
 			grid=both,
 			minor tick num=1,
 			width=0.8\textwidth, % szerokość wykresu jest 80% szerokości tekstu
-      height=6.4cm,
+      height=8.4cm,
 			legend pos=north west, % pozycja legendy
 			legend style={font=\footnotesize}, % wielkość czcionki legendy
 			ybar=5pt, % szerokość słupków
@@ -45,7 +45,7 @@ W czasach nieustannych wycieków danych i wciąż rosnącego cyberprzestępstwa 
 \section*{Ukryte zmienne środowiskowe}
 \addcontentsline{toc}{section}{Ukryte zmienne środowiskowe}
 
-Aby chronić się przed atakami, które mogą prowadzić do przeciążenia bazy danych i uniemożliwić dostęp użytkownikom do aplikacji, poprzez generowanie ogromnej ilości żądań HTTPS, należy korzystać z pliku .env. Plik ten umożliwia przekazywanie zmiennych środowiskowych w sposób tajny.
+Aby chronić się przed atakami, które mogą prowadzić do przeciążenia bazy danych i uniemożliwić dostęp użytkownikom do aplikacji, poprzez generowanie ogromnej ilości żądań HTTPS, należy korzystać z pliku .env. Plik ten umożliwia przekazywanie zmiennych środowiskowych w sposób tajny. Fragment kodu umieszczonego w pliku .env został ukazany na rysunku \ref{fig:Env}.
 
 \begin{figure}[ht]
 	\centering
@@ -56,7 +56,7 @@ Aby chronić się przed atakami, które mogą prowadzić do przeciążenia bazy 
 \end{figure}
 
 \newpage
-W przypadku projektu ZodiaCal skorzystano ze zmiennych środowiskowych w pliku konfiguracyjnym Firebase, w plikach konfiguracyjnych do integracji zewnętrznych API obsługujących horoskop oraz bazę danych kosmetyków, w pliku SignIn ukrywając ID klienta potrzebnego do logowania się za pomocą konta Google oraz w miejscach w których skorzystano ze zdjęć z Firebase Storage (Rys.\ref{fig:FirebaseConfig}).
+W przypadku projektu ZodiaCal skorzystano ze zmiennych środowiskowych w pliku konfiguracyjnym Firebase (Rys.\ref{fig:FirebaseConfig}), w plikach konfiguracyjnych do integracji zewnętrznych API obsługujących horoskop oraz bazę danych kosmetyków, w pliku SignIn ukrywając ID klienta potrzebnego do logowania się za pomocą konta Google oraz w miejscach w których skorzystano ze zdjęć z Firebase Storage.
 
 \begin{figure}[ht]
 	\centering
@@ -78,7 +78,7 @@ Kluczowym sposobem na ochronę aplikacji przed atakami cybernetycznymi jest wali
 	\label{fig:Auth}
 \end{figure}
 
-Dodatkowo mechanizm wymuszający na klientach wprowadzenie silnego hasła, czyli takiego, które ma odpowiedną długość, posiada jedną wielką literę oraz znak specjalny, chroni konta użytkowników przed atakiem brute force polegającym na złamaniu hasła poprzez sprawdzanie przez algorytm wszystkich możliwych kombinacji tekstowych. Do weryfikacji, czy hasło zawiera specjalny znak skorzystano z wyrażenia regularnego, czyli ciągu znaków, który definiuje określony wzorzec.
+Dodatkowo mechanizm wymuszający na klientach wprowadzenie silnego hasła, czyli takiego, które ma odpowiednią długość, posiada jedną wielką literę oraz znak specjalny, chroni konta użytkowników przed atakiem brute force polegającym na złamaniu hasła poprzez sprawdzanie przez algorytm wszystkich możliwych kombinacji tekstowych. Do weryfikacji, czy hasło zawiera specjalny znak skorzystano z wyrażenia regularnego, czyli ciągu znaków, który definiuje określony wzorzec.
 
 \begin{figure}[ht]
 	\centering
@@ -109,7 +109,7 @@ Kolejnym sposobem na zapewnienie bezpieczeństwa aplikacji jest kontrola liczby 
 	\centering
 	\vspace{0.25cm}
 	\includegraphics[height=5.7cm]{images/bezpieczenstwo/blad}
-	\caption{Komunikat błędu informujący o błędnym wprowadzeniu hasła}
+	\caption{Komunikat informujący o wprowadzeniu błędnego hasła zbyt dużą ilość razy}
 	\label{fig:Blad}
 \end{figure}
 
