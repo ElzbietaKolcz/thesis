@@ -1,7 +1,7 @@
 \addcontentsline{toc}{chapter}{Bezpieczeństwo i archiwizacja}
 W czasach nieustannych wycieków danych i wciąż rosnącego cyberprzestępstwa istotnym elementem jest zapewnienie odpowiedniego poziomu bezpieczeństwa aplikacji. Według analizy przeprowadzonej przez "Rzeczpospolitą", która przedstawiono na rysunku 1 na podstawie informacji policji dotyczących incydentów związanych z oszustwami internetowymi oraz phisingiem, Czyli atakami polegającym na wyłudzaniu danych, \cite{phishing}  można stwierdzić, że w ciągu ostatnich pięciu lat liczba wykrytych w Polsce przestępstw cybernetycznych wzrosła o 72\% \cite{wykresbezpieczenstwo} [\ref{fig:Wykres}].
 
-poprawic wykres i to jak wyglada
+% poprawic wykres i to jak wyglada
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
@@ -13,6 +13,7 @@ poprawic wykres i to jak wyglada
 			grid=both,
 			minor tick num=1,
 			width=0.8\textwidth, % szerokość wykresu jest 80% szerokości tekstu
+      height=6.4cm,
 			legend pos=north west, % pozycja legendy
 			legend style={font=\footnotesize}, % wielkość czcionki legendy
 			ybar=5pt, % szerokość słupków
@@ -37,19 +38,19 @@ poprawic wykres i to jak wyglada
 			\addlegendentry{Phishing, e-bankowość(art. 287 KK)}
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Wykres przedstawiający dane( w tys.) internetowe i phishing, e-bankowość dla lat 2019-2023.}
+	\caption{Wykres incydentów popełnionych z art. 267 i 287 KK}
 	\label{fig:Wykres}
 \end{figure}
 
 \section*{Ukryte zmienne środowiskowe}
 \addcontentsline{toc}{section}{Ukryte zmienne środowiskowe}
 
-Aby chronić się przed atakami, które mogą prowadzić do przeciążenia bazy danych i uniemożliwienia dostęp użytkownikom do aplikacji, poprzez generowanie ogromnej ilości żądań HTTPS, należy korzystać z pliku .env. Plik ten umożliwia przekazywanie zmiennych środowiskowych w sposób tajny.
+Aby chronić się przed atakami, które mogą prowadzić do przeciążenia bazy danych i uniemożliwić dostęp użytkownikom do aplikacji, poprzez generowanie ogromnej ilości żądań HTTPS, należy korzystać z pliku .env. Plik ten umożliwia przekazywanie zmiennych środowiskowych w sposób tajny.
 
 \begin{figure}[ht]
 	\centering
 	\vspace{0.25cm}
-	\includegraphics[height=7cm]{images/bezpieczenstwo/env}
+	\includegraphics[height=6cm]{images/bezpieczenstwo/env}
 	\caption{Zawartość pliku .env}
 	\label{fig:Env}
 \end{figure}
@@ -67,7 +68,7 @@ W przypadku projektu ZodiaCal skorzystano ze zmiennych środowiskowych w pliku k
 
 \section*{Walidacja formularzy}
 \addcontentsline{toc}{section}{Walidacja formularzy}
-Kluczowym sposobem na ochronę aplikacji przed atakami cybernetycznymi jest walidacja formularza. Pozwala ona na utrzymanie integralności danych i uniknięciu takich sytuacji, w których na przykład jeden użytkownik ma więcej, niż jedno konto przypisane do tego samego adresu e-mail. Można to osiągnąć korzystając z wbudowanych metodach Firebase odwołując się do komunikatu błędu „auth/email-already-in-use” tak jak jest to widoczne na rysunku \ref{fig:Auth}.
+Kluczowym sposobem na ochronę aplikacji przed atakami cybernetycznymi jest walidacja formularza. Pozwala ona na utrzymanie integralności danych i uniknięciu takich sytuacji, w których na przykład jeden użytkownik ma więcej, niż jedno konto przypisane do tego samego adresu e-mail. Można to osiągnąć korzystając z wbudowanych metod Firebase odwołując się do komunikatu błędu „auth/email-already-in-use” tak jak jest to widoczne na rysunku \ref{fig:Auth}.
 
 \begin{figure}[ht]
 	\centering
@@ -77,17 +78,17 @@ Kluczowym sposobem na ochronę aplikacji przed atakami cybernetycznymi jest wali
 	\label{fig:Auth}
 \end{figure}
 
-Dodatkowo mechanizm wymuszający na klientach wprowadzenie silnego hasła, czyli takiego, który ma odpowiedną długość, posiada jedną wielką literę oraz znak specjalny, chroni konta użytkowników przed atakiem brute force polegającym na złamaniu hasła poprzez sprawdzanie przez algorytm wszystkich możliwych kombinacji tekstowych. Do weryfikacji, czy hasło zawiera specjalny znak skorzystano z wyrażenia regularnego, czyli ciąg znaków, który definiuje określony wzorzec.
+Dodatkowo mechanizm wymuszający na klientach wprowadzenie silnego hasła, czyli takiego, które ma odpowiedną długość, posiada jedną wielką literę oraz znak specjalny, chroni konta użytkowników przed atakiem brute force polegającym na złamaniu hasła poprzez sprawdzanie przez algorytm wszystkich możliwych kombinacji tekstowych. Do weryfikacji, czy hasło zawiera specjalny znak skorzystano z wyrażenia regularnego, czyli ciągu znaków, który definiuje określony wzorzec.
 
 \begin{figure}[ht]
 	\centering
 	\vspace{0.25cm}
 	\includegraphics[height=8.5cm]{images/bezpieczenstwo/validationSchema}
-	\caption{Kod odpowiedzialny za weryfikację czy adres email jest już zapisany w bazie danych}
+	\caption{Kod odpowiedzialny za sprawdzenie siły hasła}
 	\label{fig:Validation}
 \end{figure}
 
-W celu osiągnięcia wyżej wymienionych korzyści wykorzystano bibliotekę yup, która pozwala zdefiniować wymagania pól tekstowych w formularzu poprzez ustalenie typu zmiennej wyjściowej, określenie czy pole jest obowiązkowe oraz ustalenie długości ciągów znaków co przedstawiono na rysunku (Rys.\ref{fig:Validation}). Podane wartości maksymalne zostały zdefiniowane przez dokument RFC 5321 \cite{rfc} definiujący standardy dotyczące protokołu używanego do przekazywania wiadomości e-mail. Ustalenie limitów pól formularza jest kluczowe, aby zapobiec problemom związanych z wydajnością systemu.
+W celu osiągnięcia wyżej wymienionych korzyści wykorzystano bibliotekę yup, która pozwala zdefiniować wymagania pól tekstowych w formularzu poprzez ustalenie typu zmiennej, określenie czy pole jest obowiązkowe oraz ustalenie długości ciągów znaków co przedstawiono na rysunku (Rys.\ref{fig:Validation}). Podane wartości maksymalne zostały zdefiniowane przez dokument RFC 5321 \cite{rfc} definiujący standardy dotyczące protokołu używanego do przekazywania wiadomości e-mail. Ustalenie limitów pól formularza jest kluczowe, aby zapobiec problemom związanych z wydajnością systemu.
 
 Dodatkowo każdy warunek powinien mieć unikalny komunikat błędu. Jest to korzystne zarówno dla dewelopera jak i użytkownika, ponieważ można określić w którym momencie pojawił się problem.
 
@@ -98,34 +99,34 @@ Kolejnym sposobem na zapewnienie bezpieczeństwa aplikacji jest kontrola liczby 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=6cm]{images/bezpieczenstwo/liczba_prob_kod}
+	\includegraphics[height=5.6cm]{images/bezpieczenstwo/liczba_prob_kod}
 	\caption{Fragment kodu odpowiadający za mechanizm zliczania prób logowania}
 	\label{fig:LiczbaProb}
 \end{figure}
 
  Następnie sprawdza, czy liczba prób przekracza wymaganą wartość. Jeśli tak, na ekranie pojawi się komunikat błędu, a przycisk logowania zostanie dezaktywowany (Rys.\ref{fig:Blad}). Użytkownik musi odczekać 3 minuty, po tym czasie licznik prób jest zerowany i można spróbować się zalogować.
-
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\vspace{0.25cm}
-	\includegraphics[height=6cm]{images/bezpieczenstwo/blad}
-	\caption{Komunikat błędu na emulatorze}
+	\includegraphics[height=5.7cm]{images/bezpieczenstwo/blad}
+	\caption{Komunikat błędu informujący o błędnym wprowadzeniu hasła}
 	\label{fig:Blad}
 \end{figure}
+
 
 \section*{Zarządzanie sesją użytkownika}
 \addcontentsline{toc}{section}{Zarządzanie sesją użytkownika}
 Po uzupełnieniu pól tekstowych formularza i wciśnięciu przycisku logowania, dane są weryfikowane za pomocą metody signInWithEmailAndPassword dostarczonej przez Firebase. Jeśli zostały poprawnie wprowadzone użytkownik zmieni stan i zostaje przeniesiony do głównej części aplikacji.
 
-Zarządzanie sesją użytkownika chroni przed nieautoryzowanym dostępem do zasobów aplikacji. Początkowo niezalogowany użytkownik ma dostęp jedynie do dwóch ekranów: SignIn oraz SignUp, natomiast po poprawnym zalogowaniu
+Zarządzanie sesją użytkownika chroni przed nieautoryzowanym dostępem do ukrytych zasobów aplikacji. Początkowo niezalogowany użytkownik ma dostęp jedynie do dwóch ekranów: SignIn oraz SignUp, natomiast po poprawnym zalogowaniu
 i uwierzytelnieniu ma on dostęp do pełnej zawartości aplikacji.
 
-Poniższy fragment kodu na rysunku \ref{fig:Blad} przedstawia nawigator, pełniący rolę kontrolera, który weryfikuje status zalogowania użytkownika i w oparciu o tę informację kieruje go między ekranami.
-
+Poniższy fragment kodu na rysunku \ref{fig:Nawigator} przedstawia nawigator, pełniący rolę kontrolera, który weryfikuje status zalogowania użytkownika i w oparciu o tę informację przenosi go między ekranami.
+\\
 \begin{figure}[ht]
 	\centering
 	\vspace{0.25cm}
-	\includegraphics[height=9cm]{images/bezpieczenstwo/nawigator}
+	\includegraphics[height=12.22cm]{images/bezpieczenstwo/nawigator}
 	\caption{Kod definiujący nawigację w zależności od stanu użytkownika}
 	\label{fig:Nawigator}
 \end{figure}
